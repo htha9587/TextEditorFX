@@ -1,0 +1,53 @@
+package editor;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.util.List;
+
+/**
+ * Version 0.1
+ * @author htha9587
+ * 6-8-16
+ */
+
+
+
+public class EditorModel 
+{
+	public void save(TextFile textFile)
+	{
+		try
+		{
+			Files.write(textFile.getFile(), textFile.getContent(), StandardOpenOption.CREATE);
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public IOResult <TextFile> load (Path file)
+	{
+		try
+		{
+			List<String> lines = Files.readAllLines(file);
+			return new IOResult<>(true, new TextFile( file, lines));
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+			return new IOResult<>(false, null);
+		}
+		
+	}
+	
+	public void close()
+	{
+		System.exit(0);
+	}
+	
+	
+}
