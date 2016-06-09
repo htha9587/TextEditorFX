@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TextEditorFX.jnlp">
+  <information>
+    <title>TextEditorFX</title>
+    <vendor>htha9587</vendor>
+    <description>TextEditorFX</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TextEditorFX.jar" size="5690" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="editor.EditorApp"  name="TextEditorFX" />
+  <update check="background"/>
+</jnlp>

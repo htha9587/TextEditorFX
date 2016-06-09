@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 
 /**
- * Version 0.1
+ * Version 0.2
  * @author htha9587
  * 6-8-16
  */
@@ -15,7 +15,7 @@ public class EditorApp extends Application {
 	@Override
 	public void start(Stage stage) throws Exception{
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("EditorUI.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Editor.fxml"));
 			loader.setControllerFactory(t -> new EditorController(new EditorModel()));
 			stage.setScene(new Scene(loader.load()));
 			stage.setTitle("TextEditorFX");

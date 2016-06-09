@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.util.List;
 
 /**
- * Version 0.1
+ * Version 0.2
  * @author htha9587		
  * 6-8-16
  */
