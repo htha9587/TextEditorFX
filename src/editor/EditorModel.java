@@ -17,6 +17,10 @@ import java.util.List;
 
 public class EditorModel 
 {
+	/**
+	 * Saves changes to files and makes a printStackTrace if a failure occurs.
+	 * @param textFile
+	 */
 	public void save(TextFile textFile)
 	{
 		try
@@ -29,6 +33,11 @@ public class EditorModel
 		}
 	}
 	
+	/**
+	 * Loads and reads all lines from the text file.
+	 * @param file
+	 * @return
+	 */
 	public IOResult <TextFile> load (Path file)
 	{
 		try
@@ -43,7 +52,9 @@ public class EditorModel
 		}
 		
 	}
-	
+	/**
+	 * Closes the application.
+	 */
 	public void close()
 	{
 		System.exit(0);

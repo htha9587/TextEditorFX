@@ -21,17 +21,27 @@ public class EditorController
 	private EditorModel model;
 	private TextFile currentTextFile;
 	
+	/**
+	 * Ties model to the controller.
+	 * @param model
+	 */
 	public EditorController(EditorModel model)
 	{
 		this.model = model;
 	}
 	
+	/**
+	 * Saves text file.
+	 */
 	@FXML
 	private void onSave()
 	{
 		TextFile textFile = new TextFile(currentTextFile.getFile(), Arrays.asList(areaText.getText().split("\n")));
 		model.save(textFile);
 	}
+	/**
+	 * Opens text file.
+	 */
 	@FXML
 	private void onLoad()
 	{
@@ -56,13 +66,17 @@ public class EditorController
 			}
 		}
 	}
-	
+	/**
+	 * Exits the application.
+	 */
 	@FXML
 	private void onClose()
 	{
 		model.close();
 	}
-	
+	/**
+	 * Opens dialog that tells what the application is about.
+	 */
 	@FXML
 	private void onAbout()
 	{

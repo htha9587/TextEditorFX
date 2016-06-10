@@ -11,6 +11,11 @@ import javafx.scene.Scene;
  * 6-8-16
  */
 
+/**
+ * 
+ * @author htha9587
+ *Gathers FXML file to help create stage and scene.
+ */
 public class EditorApp extends Application {
 	@Override
 	public void start(Stage stage) throws Exception{
@@ -24,7 +29,10 @@ public class EditorApp extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+	/**
+	 * Launches the application.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

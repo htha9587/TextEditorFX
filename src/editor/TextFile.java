@@ -16,17 +16,28 @@ public class TextFile
 	
 	private final List<String> content;
 	
+	/**
+	 * Uses Path file and a String list as data members.
+	 * @param file
+	 * @param content
+	 */
 	public TextFile(Path file, List<String> content)
 	{
 		this.file = file;
 		this.content = content;
 	}
-	
+	/**
+	 * Returns file.
+	 * @return
+	 */
 	public Path getFile()
 	{
 		return file;
 	}
-	
+	/**
+	 * Returns content.
+	 * @return
+	 */
 	public List<String> getContent()
 	{
 		return content;
